@@ -1,0 +1,6 @@
+# Mount the OpenCode session-header contributor. The profile installs this
+# package as a `link:` dependency, so `@local/dsh-opencode-session` resolves
+# from the profile's node_modules.
+- insert:
+    - id: dsh-opencode-session
+      name: '@local/dsh-opencode-session'

@@ -1,0 +1,27 @@
+{
+  "name": "@local/dsh-opencode-session",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Per-conversation x-opencode-session for OpenCode Go, injected through the llm-pi-ai/request-headers seam instead of a global fetch patch.",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
