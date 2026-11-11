@@ -30,7 +30,8 @@ ctx.waterfall('llm-pi-ai/request-headers', request, headers, () => headers)
 Step-by-step for another machine or another Harness instance: [HANDOFF.md](./HANDOFF.md).
 
 ```powershell
-dsh plugin --profile desktop add "link:C:/Users/Administrator/OneDrive/Desktop/DSH/dsh-opencode-fix"
+git clone https://github.com/devopshelper/dsh-opencode-fix "$env:USERPROFILE\dsh-opencode-fix"
+dsh plugin --profile desktop add "link:$env:USERPROFILE\dsh-opencode-fix"
 ```
 
 The profile command adds `@local/dsh-opencode-session` to `dsh.profile.bundles`; its `cordis.patch.yml` mounts the plugin under `dsh-opencode-session`. The running host reconciles profile changes, so a restart is only needed if the entry does not appear.
