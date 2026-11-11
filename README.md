@@ -27,6 +27,8 @@ ctx.waterfall('llm-pi-ai/request-headers', request, headers, () => headers)
 
 ## Install
 
+Step-by-step for another machine or another Harness instance: [HANDOFF.md](./HANDOFF.md).
+
 ```powershell
 dsh plugin --profile desktop add "link:C:/Users/Administrator/OneDrive/Desktop/DSH/dsh-opencode-fix"
 ```
